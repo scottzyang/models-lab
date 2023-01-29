@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+You are visiting the homepage.
+
+<!-- TODO: Display a list of users here, with each linking to their profile -->
+<section class="users">
+  <h2>List of usernames:</h2>
+  <ol>
+    {% for i in range(users|length) %}
+    <li><a href="http://127.0.0.1:5000/profile/{{users[i].username}}">{{users[i].username}}</a></li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% endblock %}
